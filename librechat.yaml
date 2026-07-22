@@ -54,10 +54,6 @@ modelSpecs:
 mcpServers:
   Fira MCP:
     type: streamable-http
-    url: 'https://tools-dev.firaresearch.com/mcp'
-    apiKey:
-      source: 'admin'
-      authorization_type: 'bearer'
-      key: '${FIRA_MCP_EVALS_TOKEN}'
+    url: 'https://tools-dev.firaresearch.com/mcp?token=${FIRA_MCP_EVALS_TOKEN}'
     serverInstructions: true
     timeout: 300000
