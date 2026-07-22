@@ -54,6 +54,8 @@ modelSpecs:
       label: 'Qwen 3.5-35B (Fira)'
       default: true
       group: 'fira'
+      mcpServers:
+        - 'Fira-MCP'
       preset:
         endpoint: 'fira'
         model: 'fira-lora'
