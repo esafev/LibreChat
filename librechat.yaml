@@ -35,6 +35,11 @@ endpoints:
       titleConvo: false
       summarize: false
       modelDisplayLabel: 'Qwen 3.5-35B (Fira)'
+      tokenConfig:
+        fira-lora:
+          prompt: 0
+          completion: 0
+          context: 262144
       addParams:
         chat_template_kwargs:
           enable_thinking: false
@@ -50,6 +55,7 @@ modelSpecs:
         model: 'fira-lora'
         temperature: 0
         max_tokens: 8192
+        maxContextTokens: 240000
 
 mcpServers:
   Fira MCP:
