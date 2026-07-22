@@ -34,7 +34,7 @@ endpoints:
         fetch: false
       titleConvo: false
       summarize: false
-      modelDisplayLabel: 'Fira LoRA'
+      modelDisplayLabel: 'Qwen 3.5-35B (Fira)'
       addParams:
         chat_template_kwargs:
           enable_thinking: false
@@ -42,7 +42,7 @@ endpoints:
 modelSpecs:
   list:
     - name: 'fira-lora'
-      label: 'Fira LoRA'
+      label: 'Qwen 3.5-35B (Fira)'
       default: true
       group: 'fira'
       preset:
@@ -52,8 +52,10 @@ modelSpecs:
         max_tokens: 8192
 
 mcpServers:
-  fira-dev:
+  Fira MCP:
     type: streamable-http
-    url: 'https://tools-dev.firaresearch.com/mcp?token=${FIRA_MCP_EVALS_TOKEN}'
+    url: 'https://tools-dev.firaresearch.com/mcp'
+    headers:
+      Authorization: 'Bearer ${FIRA_MCP_EVALS_TOKEN}'
     serverInstructions: true
     timeout: 300000
