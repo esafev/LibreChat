@@ -58,7 +58,7 @@ modelSpecs:
         maxContextTokens: 240000
 
 mcpServers:
-  Fira MCP:
+  Fira-MCP:
     type: streamable-http
     url: 'https://tools-dev.firaresearch.com/mcp?token=${FIRA_MCP_EVALS_TOKEN}'
     serverInstructions: true
