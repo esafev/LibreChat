@@ -24,6 +24,10 @@ interface:
     public: false
 
 endpoints:
+  agents:
+    toolApproval:
+      enabled: false
+      mode: 'bypass'
   custom:
     - name: 'fira'
       apiKey: 'dummy'
