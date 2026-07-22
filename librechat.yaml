@@ -25,7 +25,7 @@ interface:
 
 endpoints:
   custom:
-    - name: 'Fira H200'
+    - name: 'fira'
       apiKey: 'dummy'
       baseURL: 'http://95.133.253.125:8001/v1'
       models:
@@ -38,6 +38,18 @@ endpoints:
       addParams:
         chat_template_kwargs:
           enable_thinking: false
+
+modelSpecs:
+  list:
+    - name: 'fira-lora'
+      label: 'Fira LoRA'
+      default: true
+      group: 'fira'
+      preset:
+        endpoint: 'fira'
+        model: 'fira-lora'
+        temperature: 0
+        max_tokens: 8192
 
 mcpServers:
   fira-dev:
