@@ -11,7 +11,7 @@ interface:
   bookmarks: true
   multiConvo: true
   agents:
-    use: false
+    use: true
   marketplace:
     use: false
   fileCitations: true
@@ -25,6 +25,9 @@ interface:
 
 endpoints:
   agents:
+    disableBuilder: true
+    allowedProviders:
+      - 'fira'
     toolApproval:
       enabled: false
       mode: 'bypass'
@@ -58,6 +61,8 @@ modelSpecs:
         - 'Fira-MCP'
       preset:
         endpoint: 'fira'
+        endpointType: 'agents'
+        agent_id: 'ephemeral'
         model: 'fira-lora'
         temperature: 0
         max_tokens: 8192
