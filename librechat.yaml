@@ -28,6 +28,9 @@ endpoints:
     disableBuilder: true
     allowedProviders:
       - 'fira'
+    capabilities:
+      - 'tools'
+      - 'actions'
     toolApproval:
       enabled: false
       mode: 'bypass'
