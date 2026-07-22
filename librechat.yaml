@@ -1,0 +1,47 @@
+version: 1.3.13
+cache: true
+
+interface:
+  customWelcome: 'Fira Research'
+  modelSelect: true
+  parameters: true
+  presets: false
+  prompts:
+    use: false
+  bookmarks: true
+  multiConvo: true
+  agents:
+    use: false
+  marketplace:
+    use: false
+  fileCitations: true
+  defaultPinnedTools:
+    - 'mcp'
+  mcpServers:
+    use: true
+    create: false
+    share: false
+    public: false
+
+endpoints:
+  custom:
+    - name: 'Fira H200'
+      apiKey: 'dummy'
+      baseURL: 'http://95.133.253.125:8001/v1'
+      models:
+        default:
+          - 'fira-lora'
+        fetch: false
+      titleConvo: false
+      summarize: false
+      modelDisplayLabel: 'Fira LoRA'
+      addParams:
+        chat_template_kwargs:
+          enable_thinking: false
+
+mcpServers:
+  fira-dev:
+    type: streamable-http
+    url: 'https://tools-dev.firaresearch.com/mcp?token=${FIRA_MCP_EVALS_TOKEN}'
+    serverInstructions: true
+    timeout: 300000
