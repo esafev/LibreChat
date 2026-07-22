@@ -27,32 +27,29 @@ endpoints:
   agents:
     disableBuilder: true
     allowedProviders:
-      - 'fira'
+      - 'openAI'
     capabilities:
       - 'tools'
       - 'actions'
     toolApproval:
       enabled: false
       mode: 'bypass'
-  custom:
-    - name: 'fira'
-      apiKey: 'dummy'
-      baseURL: 'http://95.133.253.125:8001/v1'
-      models:
-        default:
-          - 'fira-lora'
-        fetch: false
-      titleConvo: false
-      summarize: false
-      modelDisplayLabel: 'Qwen 3.5-35B (Fira)'
-      tokenConfig:
-        fira-lora:
-          prompt: 0
-          completion: 0
-          context: 262144
-      addParams:
-        chat_template_kwargs:
-          enable_thinking: false
+  openAI:
+    models:
+      default:
+        - 'fira-lora'
+      fetch: false
+    titleConvo: false
+    summarize: false
+    modelDisplayLabel: 'Qwen 3.5-35B (Fira)'
+    tokenConfig:
+      fira-lora:
+        prompt: 0
+        completion: 0
+        context: 262144
+    addParams:
+      chat_template_kwargs:
+        enable_thinking: false
 
 modelSpecs:
   list:
@@ -63,7 +60,7 @@ modelSpecs:
       mcpServers:
         - 'Fira-MCP'
       preset:
-        endpoint: 'fira'
+        endpoint: 'openAI'
         endpointType: 'agents'
         agent_id: 'ephemeral'
         model: 'fira-lora'
